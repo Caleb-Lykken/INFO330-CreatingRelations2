@@ -31,6 +31,7 @@ UPDATE pokemon_temp SET moves = REPLACE(moves, '[', '');
 UPDATE pokemon_temp SET moves = REPLACE(moves, ']', '');
 -- using the char(39) charecter witch is the ' charecter --
 UPDATE pokemon_temp SET moves = REPLACE(moves, CHAR(39), '');
+UPDATE pokemon_temp SET moves = REPLACE(moves, ' ', '');
 
 CREATE TABLE pokemon_1nf AS 
 SELECT * FROM pokemon_temp 
